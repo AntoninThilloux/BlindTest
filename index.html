@@ -10,12 +10,20 @@
    
   <body>
   	<script src = "ShowLyrics.js"></script>
+  	<center>
+  	<p class="round" id="textRound">round : </p>
+  	<p class="totalPoints" id="textTotalPoints">Score : 0</p>
+  	<p class="currentPoints" id="textCurrentPoints">100 </p>
+  	
 
   	<button type="button" id="replay" onclick="replay()">Start</button><br>
 
   	<input type="text" id="reponse">
-  	<button type="button" id="Valider" onclick="verify()">Valider</button>
+  	<button type="button" id="Valider" onclick="verify()" disabled>Valider</button>
+  	<p class="reponse" id="textResultat"></p>
+  	<p class="reponse" id="textPoints"></p>
   	
   	<p class="calibri" id='lyrics'></p>
+  	</center>
   </body>
 </html>

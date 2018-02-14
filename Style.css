@@ -1,4 +1,32 @@
 p.calibri {
     font-family: "Calibri", Times, serif;
+    font-size: 15px;
+}
+
+p.reponse {
+    font-family: "Calibri", Times, serif;
+    font-size: 15px;
+    color: red;
+}
+
+p.round {
+    font-family: "Calibri", Times, serif;
+    font-size: 30px;
+    color: blue;
+}
+
+p.totalPoints {
+    font-family: "Calibri", Times, serif;
+    font-size: 30px;
+    color: green;
+}
+
+p.currentPoints {
+    font-family: "Calibri", Times, serif;
     font-size: 20px;
+    color: purple;
+}
+
+body {
+    background-color: white;
 }
