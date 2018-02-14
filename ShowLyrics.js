@@ -1,11 +1,12 @@
 var test = "";
 var toShow = "";
 getLyrics("test","test2");
-var t = setInterval(Show,100); 
+var t;
 
 function Show(){
     var n = test.indexOf('\n');
     if (n == -1){
+        toShow += test;
     	stopShow();
     }
     toShow += test.substring(0,n+1)+ "<br>";
@@ -17,27 +18,26 @@ function stopShow(){
     clearInterval(t);
 }
 
+function startShow(){
+    t = setInterval(Show,100); 
+}
 
 function getLyrics(autor, song){
     var address = "https://api.lyrics.ovh/v1/" + "village people" + "/" + "in the navy"; 
-    console.log(address);
 
     const req = new XMLHttpRequest();
+    var rep;
 
 	req.onreadystatechange = function() { 
-        if (req.readyState == 4 && req.status == 200)
-            callback(req.responseText);
+        if (req.readyState == 4 && req.status == 200){
+            rep=req.responseText;
+            test = JSON.parse(req.response).lyrics;
+            console.log(req)
+                startShow();
+        }
     }
 
 	req.open('GET', address, true); 
 	req.send(null);
-
-
-	if (req.status === 200) {
- 	   console.log("Réponse reçue: %s", req.responseText);
- 	   test = req.lyrics;
-	} else {
-	    console.log("Status de la réponse: %d (%s)", req.status, req.statusText);
-	}
 
 }
