@@ -4,10 +4,18 @@
   <head>
   	<meta charset="utf-8" />
     <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+
   </head>
    
   <body>
-  	 <script src = "ShowLyrics.js"></script>
-  <div id='lyrics'></div>
+  	<script src = "ShowLyrics.js"></script>
+
+  	<button type="button" id="replay" onclick="replay()">Start</button><br>
+
+  	<input type="text" id="reponse">
+  	<button type="button" id="Valider" onclick="verify()">Valider</button>
+  	
+  	<p class="calibri" id='lyrics'></p>
   </body>
 </html>
