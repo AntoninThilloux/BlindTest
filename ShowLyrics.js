@@ -1,5 +1,6 @@
-var test = "Where can you find pleasure\r\nSearch the world for treasure\r\nLearn science technology\r\n\nWhere can you begin to make your dreams all come true\r\nOn the land or on the sea\r\nWhere can you learn to fly\nPlay in sports and skin dive\nStudy oceanography\nSign up for the big band\nOr sit in the grandstand";
+var test = "";
 var toShow = "";
+getLyrics("test","test2");
 var t = setInterval(Show,100); 
 
 function Show(){
@@ -16,6 +17,27 @@ function stopShow(){
     clearInterval(t);
 }
 
+
 function getLyrics(autor, song){
-    
+    var address = "https://api.lyrics.ovh/v1/" + "village people" + "/" + "in the navy"; 
+    console.log(address);
+
+    const req = new XMLHttpRequest();
+
+	req.onreadystatechange = function() { 
+        if (req.readyState == 4 && req.status == 200)
+            callback(req.responseText);
+    }
+
+	req.open('GET', address, true); 
+	req.send(null);
+
+
+	if (req.status === 200) {
+ 	   console.log("Réponse reçue: %s", req.responseText);
+ 	   test = req.lyrics;
+	} else {
+	    console.log("Status de la réponse: %d (%s)", req.status, req.statusText);
+	}
+
 }
