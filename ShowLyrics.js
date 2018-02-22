@@ -14,6 +14,13 @@ var multiplier = 0;
 
 function Show(){
     var n = response.indexOf('\n');
+
+    if(response.indexOf('Paroles de la chanson') == 0)
+    {
+      response = response.substring(n+1,response.length);
+      n = response.indexOf('\n');
+    }
+
     if (n == -1){
         points  = 15;
         toShow += response;
