@@ -5,16 +5,17 @@
   	<meta charset="utf-8" />
     <title>Le Grand DeafTest</title>
     <link rel="stylesheet" type="text/css" href="Style.css">
-
   </head>
 
   <body>
   	<script src = "ShowLyrics.js"></script>
   	<script src = "ListSong.js"></script>
-  	<center>
-    	<p class="round" id="textRound">Round: </p>
-    	<p class="totalPoints" id="textTotalPoints">Score: 0</p>
-    	<p class="currentPoints" id="textCurrentPoints">100 </p>
+  	<div id="mainBody">
+      <h1>Le Grand DeafTest !</h1>
+
+    	<h2 class="round" id="textRound">Round: </h2>
+    	<h2 class="totalPoints" id="textTotalPoints">Score: 0</h2>
+    	<h3 class="currentPoints" id="textCurrentPoints">100 </h3>
 
       <button type="button" id="replay" onclick="replay()">Start</button><br>
 
@@ -23,6 +24,6 @@
     	<p class="reponse" id="textResultat"></p>
     	<p class="reponse" id="textPoints"></p>
     	<p class="calibri" id='lyrics'></p>
-  	</center>
+  	</div>
   </body>
 </html>

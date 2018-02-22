@@ -1,32 +1,56 @@
-p.calibri {
-    font-family: "Calibri", Times, serif;
-    font-size: 15px;
+@font-face {
+    font-family: 'feeding_a_moment';
+    src: url('./fonts/feeding_a_moment/FeedingaMoment.otf');
 }
 
-p.reponse {
-    font-family: "Calibri", Times, serif;
+@font-face {
+    font-family: 'sanchez';
+    src: url('./fonts/sanchez/Sanchezregular.otf');
+}
+
+.calibri {
     font-size: 15px;
+    color: #142ACC;
+    font-family: 'sanchez', "Calibri", Times, serif;
+}
+
+.reponse {
+    font-size: 15px;
+    font-family: 'sanchez', "Calibri", Times, serif;
     color: red;
 }
 
-p.round {
-    font-family: "Calibri", Times, serif;
-    font-size: 30px;
-    color: blue;
+.round {
+    color: #62FF00;
 }
 
-p.totalPoints {
-    font-family: "Calibri", Times, serif;
-    font-size: 30px;
-    color: green;
+.totalPoints {
+    color: #B23E12;
 }
 
-p.currentPoints {
-    font-family: "Calibri", Times, serif;
-    font-size: 20px;
-    color: purple;
+.currentPoints {
+    color: #FF4600;
+}
+
+#mainBody{
+  text-align: center;
+  align-items: center;
 }
 
 body {
-    background-color: white;
+  font-family: 'feeding_a_moment', "Calibri", Times, serif;
+  background-color: black;
+}
+
+h1 {
+  font-size: 65px;
+  color: white;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
 }
